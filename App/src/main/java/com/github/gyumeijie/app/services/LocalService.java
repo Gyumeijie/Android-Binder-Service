@@ -1,4 +1,4 @@
-package com.example.app.services;
+package com.github.gyumeijie.app.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -8,7 +8,12 @@ import android.os.IBinder;
 import java.util.Random;
 
 /**
- * Created by dkocian on 11/16/13.
+ *   Declares a service (a Service subclass) as one of the application's components. Unlike activities,
+ *   services lack a visual user interface. They're used to implement long-running background operations
+ *   or a rich communications API that can be called by other applications.
+ *
+ *   All services must be represented by <service> elements in the manifest file. Any that are not declared
+ *   there will not be seen by the system and will never be run.
  */
 public class LocalService extends Service {
     public static final int UPPER_BOUND = 100;
@@ -34,7 +39,7 @@ public class LocalService extends Service {
 
     public class LocalBinder extends Binder {
         public LocalService getService() {
-            // Return this instance of LocalService so clients can call public methods
+            // Return `this` instance of LocalService so clients can call public methods
             return LocalService.this;
         }
     }

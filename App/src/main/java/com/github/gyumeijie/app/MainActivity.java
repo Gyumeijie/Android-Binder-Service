@@ -1,4 +1,4 @@
-package com.example.app;
+package com.github.gyumeijie.app;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -16,8 +16,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.app.services.LocalService;
+import com.github.gyumeijie.R;
+import com.github.gyumeijie.app.services.LocalService;
 
+/**
+ * Declares an activity (an Activity subclass) that implements part of the application's visual
+ * user interface.
+ *
+ * All activities must be represented by <activity> elements in the manifest file.
+ * Any that are not declared there will not be seen by the system and will never be run.
+ */
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int NUMBER_TO_ASK_FOR = 5;
@@ -102,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     // A placeholder fragment containing a simple view.
     public static class PlaceholderFragment extends Fragment {
         public PlaceholderFragment() {
-            //Empty
+            // Do nothing
         }
 
         @Override
@@ -123,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onServiceDisconnected(ComponentName arg0) {
+        public void onServiceDisconnected(ComponentName arg) {
             mBound = false;
         }
     };

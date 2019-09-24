@@ -3,12 +3,11 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
     }
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.app"
-        minSdkVersion 14
-        targetSdkVersion 22
+        applicationId "com.github.gyumeijie.app"
+        minSdkVersion 16
+        targetSdkVersion 28
         versionCode 2
         versionName "2.0"
     }
@@ -31,5 +30,5 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.2.1'
+    implementation 'com.android.support:appcompat-v7:22.2.1'
 }

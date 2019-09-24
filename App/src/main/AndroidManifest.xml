@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app">
+    package="com.github.gyumeijie">
 
     <application
         android:allowBackup="true"
@@ -8,15 +8,22 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.app.MainActivity"
+            android:name="com.github.gyumeijie.app.MainActivity"
             android:label="@string/app_name" >
+            <!--
+            An <intent-filter> element must contain one or more <action> elements. If there are no
+            <action> elements in an intent filter, the filter doesn't accept any Intent objects
+            -->
             <intent-filter>
+                <!--
+                Means that this activity is the entry point of the application, i.e. when you launch
+                the application, this activity is created
+                -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".services.LocalService"/>
+        <service android:name="com.github.gyumeijie.app.services.LocalService"/>
     </application>
 
 </manifest>
